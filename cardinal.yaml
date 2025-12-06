@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cardinal
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Birds</title>
+    </head>
+    <body>
+        <h1>Cardinal</h1>
+        <img src="https://media.istockphoto.com/id/1488832204/photo/beautiful-male-northern-cardinal-perched-on-a-tree-branch.jpg?s=612x612&w=0&k=20&c=dNrUSCJl_3mrV9KxuYOYGDSuwbiy9faOgsaH2SZ9kOY="/>
+    </body>
+    </html>

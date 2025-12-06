@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bird-balancer
+spec:
+  selector:
+    family: birds # Matches the label on your nginx-web pod
+  ports:
+    - protocol: TCP
+      port: 80       # The port the LoadBalancer exposes externally
+      targetPort: 80 # The port on the Pod the traffic is forwarded to
+  type: LoadBalancer # The key setting to request an external LoadBalancer

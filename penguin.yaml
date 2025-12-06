@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: penguin
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Birds</title>
+    </head>
+    <body>
+        <h1>Penguin</h1>
+        <img src="https://media.istockphoto.com/id/533995902/photo/gentoo-penguin-walking-in-snow-in-antarctica.jpg?s=612x612&w=0&k=20&c=VZ2ufwdkfo7BXK22tCu8tqTM27pxby-bKRGpYO61k-s=" />
+    </body>
+    </html>

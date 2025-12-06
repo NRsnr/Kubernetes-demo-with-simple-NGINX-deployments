@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bluejay
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Birds</title>
+    </head>
+    <body>
+        <h1>Blue Jay</h1>
+        <img src="https://media.istockphoto.com/id/531312698/photo/blue-jay-in-tree.jpg?s=612x612&w=0&k=20&c=qyr6CjopMvpe-d-w2Pc6vFnk4ST1kDQVsXYOeB7KIdQ=" />
+    </body>
+    </html>

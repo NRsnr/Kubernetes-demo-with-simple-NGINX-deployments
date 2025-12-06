@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cardinal-deployment
+  
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      species: cardinals
+      family: birds
+  template:
+    metadata:
+      name: nginx-custom-page
+      labels:
+        species: cardinals
+        family: birds
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx:1.25.3 # Using a specific NGINX version
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: config-volume
+              mountPath: /usr/share/nginx/html # Mount the ConfigMap here
+      volumes:
+        - name: config-volume
+          configMap:
+            name: cardinal # Reference the ConfigMap created above

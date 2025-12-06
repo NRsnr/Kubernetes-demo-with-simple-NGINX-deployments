@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: duck
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Birds</title>
+    </head>
+    <body>
+        <h1>Duck</h1>
+        <img src="https://media.istockphoto.com/id/1443811606/photo/cute-duck-in-a-pond.jpg?s=612x612&w=0&k=20&c=wXiFQgqTG7Gd_QYlpctQye-FLKLbKv-bcxcv84dg9Eo=" />
+    </body>
+    </html>

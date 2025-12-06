@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+      name: duck
+      labels:
+        species: ducks
+        family: birds
+spec:
+      containers:
+        - name:  duck
+          image: nginx:1.25.3 # Using a specific NGINX version
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: config-volume
+              mountPath: /usr/share/nginx/html # Mount the ConfigMap here
+      volumes:
+        - name: config-volume
+          configMap:
+            name: duck  # Reference the ConfigMap created above
+
